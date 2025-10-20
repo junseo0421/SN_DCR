@@ -24,12 +24,12 @@ class BaseOptions():
         """Define the common options that are used in both training and test."""
         # basic parameters
         parser.add_argument('--dataroot',
-                            default=r'C:\Users\8138\Desktop\SD&HK finger-vein DB\mmcbnu6000\original_images_split\mmcbnu-1',
+                            default='/content/original_images_split/mmcbnu-1',
                             help='path to images (should have subfolders trainA, trainB, valA, valB, etc)')
         parser.add_argument('--name', type=str, default='mmcbnu-1', help='name of the experiment. It decides where to store samples and models')
         parser.add_argument('--easy_label', type=str, default='SN_DCR', help='Interpretable name')
         parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
-        parser.add_argument('--checkpoints_dir', type=str, default='D:/comparison/sn_dcr/output/mmcbnu-1/checkpoints/', help='models are saved here')
+        parser.add_argument('--checkpoints_dir', type=str, default='/content/drive/MyDrive/comparison/sn_dcr/output/checkpoints/', help='models are saved here')
         # model parameters
         parser.add_argument('--model', type=str, default='sndcr', help='chooses which model to use.')
         parser.add_argument('--input_nc', type=int, default=3, help='# of input image channels: 3 for RGB and 1 for grayscale')
