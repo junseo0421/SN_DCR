@@ -13,7 +13,7 @@ if __name__ == '__main__':
     opt = TrainOptions().parse()   # get training options
 
     ds = CUSTOMDataset(opt)
-    dataset = DataLoader(ds, batch_size=4, shuffle=True)
+    dataset = DataLoader(ds, batch_size=4, shuffle=True, num_workers=4, pin_memory=True, persistent_workers=True, prefetch_factor=2)
 
     model = create_model(opt)      # create a model given opt.model and other options
 
