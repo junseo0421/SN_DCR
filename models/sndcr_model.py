@@ -236,7 +236,7 @@ class SNDCRModel(BaseModel):
 class Vgg16(nn.Module):
     def __init__(self):
         super(Vgg16, self).__init__()
-        features = vgg16(torch.load("vgg16-397923af.pth")).features.cuda()
+        features = vgg16(torch.load("/content/drive/MyDrive/vgg16-397923af.pth")).features.cuda()
         self.to_relu_1_2 = nn.Sequential()
         self.to_relu_2_2 = nn.Sequential()
         self.to_relu_3_3 = nn.Sequential()
