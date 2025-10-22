@@ -25,7 +25,7 @@ class TrainOptions(BaseOptions):
         parser.add_argument('--evaluation_freq', type=int, default=5000, help='evaluation freq')
         parser.add_argument('--save_by_iter', action='store_true', help='whether saves model by iteration')
         parser.add_argument('--continue_train', type=bool, default=True, help='continue training: load the latest model')
-        parser.add_argument('--epoch_count', type=int, default=100, help='the starting epoch count, we save the model by <epoch_count>, <epoch_count>+<save_latest_freq>, ...')
+        parser.add_argument('--epoch_count', type=int, default=200, help='the starting epoch count, we save the model by <epoch_count>, <epoch_count>+<save_latest_freq>, ...')
         parser.add_argument('--phase', type=str, default='train', help='train, val, test, etc')
         parser.add_argument('--pretrained_name', type=str, default=None, help='resume training from another checkpoint')
 
